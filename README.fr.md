@@ -14,6 +14,24 @@ make init-ca
 make user USER=bob
 
 
+---
+
+## ⚙️ Prérequis
+
+### Installer OpenSSL (recommandé)
+
+Assurez-vous qu’OpenSSL est installé sur votre système.
+
+#### Linux
+```bash
+sudo apt install openssl
+
+### Powershell
+winget install ShiningLight.OpenSSL
+
+### macOS
+brew install openssl
+
 ## 🎯 Objectif
 
 Ce projet propose une chaîne PKI complète :

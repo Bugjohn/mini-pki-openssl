@@ -13,6 +13,21 @@
 make init-ca
 make user USER=bob
 
+## ⚙️ Prerequisites
+
+### Install OpenSSL (recommended)
+
+Make sure OpenSSL is installed on your system.
+
+#### Linux
+```bash
+sudo apt install openssl
+
+### Powershell
+winget install ShiningLight.OpenSSL
+
+### macOS
+brew install openssl
 
 ## 🎯 Overview
 
