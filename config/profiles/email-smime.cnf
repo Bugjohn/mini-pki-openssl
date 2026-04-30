@@ -1,0 +1,19 @@
+#
+# S/MIME user certificate extensions
+# Used with:
+# openssl ca -config config/openssl.cnf -extfile config/profiles/email-smime.cnf -extensions email_smime
+#
+
+[ email_smime ]
+
+basicConstraints = critical, CA:false
+
+keyUsage = critical, digitalSignature, keyEncipherment
+
+extendedKeyUsage = emailProtection, clientAuth
+
+subjectKeyIdentifier = hash
+
+authorityKeyIdentifier = keyid,issuer
+
+subjectAltName = email:copy

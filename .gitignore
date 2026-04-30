@@ -1,0 +1,18 @@
+# Private keys / secrets
+*.key
+*.p12
+*.pfx
+*.pem
+*.rnd
+.env
+
+# Generated PKI content
+pki/root/private/*
+pki/root/newcerts/*
+pki/users/*
+output/*
+
+# Keep folder structure
+!.gitkeep
+!pki/root/private/.gitkeep
+!pki/users/.gitkeep
