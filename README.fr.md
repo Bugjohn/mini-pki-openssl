@@ -9,10 +9,8 @@
 
 ## 🚀 Quick Demo
 
-```bash
 make init-ca
 make user USER=bob
-
 
 ---
 
@@ -23,13 +21,15 @@ make user USER=bob
 Assurez-vous qu’OpenSSL est installé sur votre système.
 
 #### Linux
-```bash
+
 sudo apt install openssl
 
 ### Powershell
+
 winget install ShiningLight.OpenSSL
 
 ### macOS
+
 brew install openssl
 
 ## 🎯 Objectif
@@ -94,21 +94,20 @@ Imagine une entreprise souhaitant :
          +------------------+
                   |
                   ↓
- +------------------------------------+
- | Email / Navigateur / Auth API     |
- +------------------------------------+
+
++------------------------------------+
+| Email / Navigateur / Auth API |
++------------------------------------+
 
 ## 📸 Exemple
 
 Structure générée :
-
 
 pki/users/bob/
 ├── bob.key
 ├── bob.csr
 ├── bob.crt
 └── bob.p12
-
 
 Utilisation :
 
@@ -126,16 +125,13 @@ Utilisation :
 
 sudo apt install openssl
 
-
 #### macOS
 
 brew install openssl
 
-
 #### Windows
 
 winget install ShiningLight.OpenSSL
-
 
 ---
 
@@ -143,61 +139,47 @@ winget install ShiningLight.OpenSSL
 
 ### 1. Créer la CA
 
-
 ./scripts/linux/01-create-root-ca.sh
-
 
 ---
 
 ### 2. Créer un utilisateur
 
-
 ./scripts/linux/02-create-user-key-csr.sh bob
-
 
 ---
 
 ### 3. Signer le certificat
 
-
 ./scripts/linux/03-sign-user-cert.sh bob
-
 
 ---
 
 ### 4. Export PKCS#12
 
-
 ./scripts/linux/04-export-p12.sh bob
-
 
 ---
 
 ### 5. Révoquer un certificat
 
-
 ./scripts/linux/05-revoke-user-cert.sh bob
-
 
 ---
 
 ### 6. Générer la CRL
 
-
 ./scripts/linux/06-generate-crl.sh
-
 
 ---
 
 ## 🔐 Fonctionnement
-
 
 Autorité CA
 │
 ├── signe → Certificats utilisateurs
 │
 └── gère → Révocation + CRL
-
 
 ---
 
@@ -247,3 +229,21 @@ La PKI est au cœur de la sécurité moderne :
 - architectures Zero Trust
 
 👉 Ce projet fait le lien entre théorie et pratique.
+
+## 🧓 Version Legacy disponible
+
+Une version Legacy de ce projet est également disponible dans le dépôt : Mini-PKI-LEGACY.
+
+Elle reproduit une implémentation typique des années 2000, basée sur des scripts .bat et une utilisation directe d’OpenSSL, sans automatisation ni abstraction.
+
+## 👉 Cette version est :
+
+fonctionnelle et ready-to-use
+non maintenue volontairement
+destinée à un usage pédagogique uniquement
+
+Elle permet de comprendre concrètement les fondamentaux de la PKI, sans les couches modernes (ACME, API, automatisation).
+
+## ⚠️ Ne pas utiliser en production : absence de gestion de révocation, de gouvernance et de mécanismes de sécurité modernes.
+
+➡️ Un excellent complément pour voir que, finalement… rien n’a vraiment changé 😉

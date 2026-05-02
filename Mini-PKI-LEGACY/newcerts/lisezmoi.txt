@@ -1,1 +1,1 @@
-Ce répertoire sert à stocker les certificats générés.
+Ce repertoire sert a stocker les certificats generes.

@@ -1,5 +1,0 @@
-V	271111115003Z		01	unknown	/CN=viviana PERETTO/Email=contact@avis2sante.fr
-V	271111115217Z		02	unknown	/CN=Jean-Marc VIEUX/Email=j-m.vieux@avis2sante.fr
-V	271111134501Z		03	unknown	/CN=jean marc/Email=jean-marc.vieux@intelartifice.fr
-V	271111135927Z		04	unknown	/CN=Eugenio La Scala/Email=epflascala@hotmail.com
-V	271201225800Z		05	unknown	/CN=Pierre-Julien Lamy/Email=p-j.lamy@avis2sante;fr

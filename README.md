@@ -9,7 +9,6 @@
 
 ## 🚀 Quick Demo
 
-```bash
 make init-ca
 make user USER=bob
 
@@ -20,13 +19,15 @@ make user USER=bob
 Make sure OpenSSL is installed on your system.
 
 #### Linux
-```bash
+
 sudo apt install openssl
 
 ### Powershell
+
 winget install ShiningLight.OpenSSL
 
 ### macOS
+
 brew install openssl
 
 ## 🎯 Overview
@@ -98,13 +99,11 @@ Imagine a company that wants to:
 
 ### Generated user structure:
 
-
 pki/users/bob/
 ├── bob.key
 ├── bob.csr
 ├── bob.crt
 └── bob.p12
-
 
 ### Usage:
 
@@ -122,16 +121,13 @@ pki/users/bob/
 
 sudo apt install openssl
 
-
 #### macOS
 
 brew install openssl
 
-
 #### Windows
 
 winget install ShiningLight.OpenSSL
-
 
 ---
 
@@ -139,61 +135,47 @@ winget install ShiningLight.OpenSSL
 
 ### 1. Create Root CA
 
-
 ./scripts/linux/01-create-root-ca.sh
-
 
 ---
 
 ### 2. Generate User
 
-
 ./scripts/linux/02-create-user-key-csr.sh bob
-
 
 ---
 
 ### 3. Sign Certificate
 
-
 ./scripts/linux/03-sign-user-cert.sh bob
-
 
 ---
 
 ### 4. Export PKCS#12
 
-
 ./scripts/linux/04-export-p12.sh bob
-
 
 ---
 
 ### 5. Revoke Certificate
 
-
 ./scripts/linux/05-revoke-user-cert.sh bob
-
 
 ---
 
 ### 6. Generate CRL
 
-
 ./scripts/linux/06-generate-crl.sh
-
 
 ---
 
 ## 🔐 How it Works
-
 
 Root CA
 │
 ├── signs → User certificates
 │
 └── manages → Revocation + CRL
-
 
 ---
 
@@ -242,3 +224,21 @@ PKI is at the core of modern security:
 - Zero Trust architectures
 
 👉 This project bridges theory and real-world implementation.
+
+## 🧓 Legacy Version Available
+
+A Legacy version of this project is also available in the repository: Mini-PKI-LEGACY.
+
+It reproduces a typical early 2000s implementation, based on .bat scripts and direct OpenSSL usage, without automation or abstraction.
+
+## 👉 This version is:
+
+fully functional and ready-to-use
+intentionally not maintained
+intended for educational purposes only
+
+It provides a hands-on understanding of PKI fundamentals, without modern layers (ACME, APIs, automation).
+
+## ⚠️ Do not use in production: no revocation management, no governance, and no modern security mechanisms.
+
+➡️ A great way to realize that, in the end… nothing really changed 😉
